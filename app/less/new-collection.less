@@ -1,10 +1,30 @@
 .new-collection {
   width: 100%;
   display: grid;
-  
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    'navigation navigation navigation navigation navigation . . other'
+    '. new-collection__photo new-collection__photo new-collection__photo new-collection__photo new-collection__photo new-collection__photo .'
+    '. entry entry entry entry entry entry .';
+
+  .navigation {
+    grid-area: navigation;
+  }
+
+  .entry {
+    grid-area: entry;
+  }
+
+  .new-collection__photo {
+    grid-area: new-collection__photo;
+  }
+
+  .other {
+    grid-area: other;
+  }
 
   &__photo {
-    width: 240px;
-    height: 300px;
+    height: 249px;
+    background-color: coral;
   }
 }
