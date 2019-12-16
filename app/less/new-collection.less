@@ -1,67 +1,76 @@
 .new-collection {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 73px 300px 283px;
-  grid-template-areas:
-    "navigation navigation . other"
-    ". new-collection__photo new-collection__photo ."
-    ". entry entry .";
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 73px 300px 283px;
+    grid-template-areas:
+        "navigation navigation . buy"
+        ". new-collection__photo new-collection__photo ."
+        ". entry entry .";
 
-  .navigation {
+    &__photo {
+        height: 249px;
+        margin-top: 56px;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 109px;
+            height: 80px;
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            background: repeating-linear-gradient(45deg, transparent, transparent 5px, black 6px, black 6px);
+            z-index: -1;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 109px;
+            height: 80px;
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: repeating-linear-gradient(-45deg, transparent, transparent 5px, black 6px, black 6px);
+            z-index: -1;
+        }
+    }
+}
+
+.buy {
+    grid-area: buy;
+}
+
+.navigation {
     grid-area: navigation;
-  }
+}
 
-  .entry {
+.entry {
     grid-area: entry;
-  }
+}
 
-  .new-collection__photo {
+.new-collection__photo {
     grid-area: new-collection__photo;
     justify-self: center;
-  }
+}
 
-  .other {
-    grid-area: other;
-  }
-
-  &__photo {
-    height: 249px;
-    margin-top: 56px;
-    position: relative;
-    z-index: 1;
-
-    &::before {
-      content: "";
-      display: block;
-      width: 109px;
-      height: 80px;
-      position: absolute;
-      top: -20px;
-      left: -20px;
-      background: repeating-linear-gradient(45deg, transparent, transparent 5px, black 6px, black 6px);
-      z-index: -1;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      width: 109px;
-      height: 80px;
-      position: absolute;
-      bottom: -20px;
-      right: -20px;
-      background: repeating-linear-gradient(-45deg, transparent, transparent 5px, black 6px, black 6px);
-      z-index: -1;
-    }
-  }
+.social {
+    grid-area: social;
 }
 
 @media screen and (min-width: 768px) {
-  .new-collection {
-    &__photo {
-      width: 264px;
-      height: auto;
+    .new-collection {
+        grid-template-areas:
+            "navigation . . buy"
+            "entry entry new-collection__photo new-collection__photo"
+            ". . social social";
+
+        &__photo {
+            width: 264px;
+            height: auto;
+        }
     }
-  }
 }
