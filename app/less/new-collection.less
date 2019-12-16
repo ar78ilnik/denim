@@ -1,56 +1,67 @@
 .new-collection {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
-    grid-template-areas:
-        'navigation . other'
-        'new-collection__photo new-collection__photo new-collection__photo'
-        'entry entry entry';
-    margin-top: 24px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 73px 300px 283px;
+  grid-template-areas:
+    "navigation navigation . other"
+    ". new-collection__photo new-collection__photo ."
+    ". entry entry .";
 
-    .navigation {
-        grid-area: navigation;
-    }
+  .navigation {
+    grid-area: navigation;
+  }
 
-    .entry {
-        grid-area: entry;
-    }
+  .entry {
+    grid-area: entry;
+  }
 
-    .new-collection__photo {
-        grid-area: new-collection__photo;
-        justify-self: center;
-    }
+  .new-collection__photo {
+    grid-area: new-collection__photo;
+    justify-self: center;
+  }
 
-    .other {
-        grid-area: other;
-    }
+  .other {
+    grid-area: other;
+  }
 
-    &__photo {
-        height: 249px;
-        margin-top: 56px;
-        position: relative;
-        z-index: 1;
+  &__photo {
+    height: 249px;
+    margin-top: 56px;
+    position: relative;
+    z-index: 1;
+
     &::before {
-        content: "";
-        display: block;
-        width: 109px;
-        height: 80px;
-        position: absolute;
-        top: -20px;
-        left: -20px;
-        background: repeating-linear-gradient(45deg, transparent, transparent 5px, black 6px, black 6px);
-        z-index: -1;
+      content: "";
+      display: block;
+      width: 109px;
+      height: 80px;
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      background: repeating-linear-gradient(45deg, transparent, transparent 5px, black 6px, black 6px);
+      z-index: -1;
     }
+
     &::after {
-        content: "";
-        display: block;
-        width: 109px;
-        height: 80px;
-        position: absolute;
-        bottom: -20px;
-        right: -20px;
-        background: repeating-linear-gradient(-45deg, transparent, transparent 5px, black 6px, black 6px);
-        z-index: -1;
+      content: "";
+      display: block;
+      width: 109px;
+      height: 80px;
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: repeating-linear-gradient(-45deg, transparent, transparent 5px, black 6px, black 6px);
+      z-index: -1;
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .new-collection {
+    &__photo {
+      width: 264px;
+      height: auto;
     }
+  }
 }
