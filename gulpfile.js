@@ -8,6 +8,7 @@ const gulp = require("gulp"),
     rename = require("gulp-rename"),
     postcss = require("gulp-postcss"),
     webp = require('gulp-webp'),
+    imagemin = require("gulp-imagemin"),
     autoprefixer = require("autoprefixer"),
     del = require("del");
 
@@ -19,7 +20,7 @@ gulp.task("copy", function () {
     return gulp.src([
         "app/*.html",
         "app/fonts/**/*.{woff,woff2}",
-        "app/img/**",
+                "app/img/**/*.svg",
         "app/js/**",
       "app/documentacion/*.*"
     ], {
@@ -28,10 +29,21 @@ gulp.task("copy", function () {
         .pipe(gulp.dest("dist"));
 });
 
+gulp.task("images", function () {
+    return gulp.src("app/img/**/*.{jpg,png}")
+        .pipe(imagemin([
+        imagemin.jpegtran({
+                progressive: true
+            }),
+        imagemin.svgo()
+    ]))
+        .pipe(gulp.dest("dist/img"));
+});
+
 gulp.task("webp", function () {
     return gulp.src("app/img/**/*.{png,jpg}")
         .pipe(webp({
-            quality: 100
+            quality: 90
         }))
         .pipe(gulp.dest("dist/img"));
 });
@@ -91,7 +103,7 @@ gulp.task("bs", function () {
 
 
 
-gulp.task("build", gulp.series("clean", "copy", "less", "js", "html", "bs"));
+gulp.task("build", gulp.series("clean", "copy", "images", "webp", "less", "js", "html", "bs"));
 
 gulp.watch("app/less/**/*.less", gulp.series("less")),
     gulp.watch("app/*.html", gulp.series("html")),
