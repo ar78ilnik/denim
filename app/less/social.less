@@ -1,18 +1,20 @@
 .social {
-  display: none;
+    display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .social {
-    width: 170px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    .social {
+        width: 170px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 85px;
+        flex-direction: row-reverse;
 
-    &__link {
-      font-family: "Work Sans Regular";
-      color: #151c22;
-      text-decoration: none;
+        &__link {
+            font-family: "Work Sans Regular";
+            color: #151c22;
+            text-decoration: none;
+        }
     }
-  }
 }
