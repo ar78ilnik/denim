@@ -1,16 +1,16 @@
 .new-collection {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 84px 300px 283px;
-    grid-template-areas:
-        "navigation navigation . buy"
-        ". new-collection__photo new-collection__photo ."
-        ". entry entry .";
 
     &__photo {
-        height: 249px;
-        margin-top: 56px;
+        grid-column-start: 2;
+        grid-column-end: 10;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        justify-self: center;
+        padding-top: 15px;
         position: relative;
         z-index: 1;
 
@@ -20,7 +20,7 @@
             width: 109px;
             height: 80px;
             position: absolute;
-            top: -20px;
+            top: -6px;
             left: -20px;
             background: repeating-linear-gradient(45deg, transparent, transparent 5px, black 6px, black 6px);
             z-index: -1;
@@ -32,7 +32,7 @@
             width: 109px;
             height: 80px;
             position: absolute;
-            bottom: -20px;
+            bottom: 16px;
             right: -20px;
             background: repeating-linear-gradient(-45deg, transparent, transparent 5px, black 6px, black 6px);
             z-index: -1;
@@ -40,39 +40,61 @@
     }
 }
 
-.buy {
-    grid-area: buy;
-}
-
-.navigation {
-    grid-area: navigation;
-}
-
-.entry {
-    grid-area: entry;
-}
-
-.new-collection__photo {
-    grid-area: new-collection__photo;
-    justify-self: center;
-}
-
-.social {
-    grid-area: social;
-}
-
 @media screen and (min-width: 768px) {
     .new-collection {
-        grid-template-areas:
-            "navigation . . buy"
-            "entry entry new-collection__photo new-collection__photo"
-            ". . . social";
+        grid-template-rows: 55px 377px 96px;
 
         &__photo {
             width: 264px;
-            height: 319px;
-            align-items: start;
-            margin-top: 0;
+            height: auto;
+            grid-column-start: 7;
+            grid-column-end: 11;
+            margin-left: -49px;
+            margin-top: 14px;
+
+            &::before {
+                width: 141px;
+                height: 104px;
+                top: -15px;
+                left: -30px;
+            }
+
+            &::after {
+                width: 141px;
+                height: 104px;
+                bottom: 0;
+                right: -30px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .new-collection {
+        grid-template-rows: 620px;
+
+        &__photo {
+            width: 430px;
+            height: 520px;
+            margin-top: 36px;
+            margin-left: 48px;
+            grid-column-start: 5;
+            grid-column-end: 10;
+            grid-row-start: 1;
+
+            &::before {
+                width: 230px;
+                height: 176px;
+                top: -35px;
+                left: -50px;
+            }
+
+            &::after {
+                width: 230px;
+                height: 176px;
+                bottom: -47px;
+                right: -50px;
+            }
         }
     }
 }

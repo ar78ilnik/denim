@@ -3,6 +3,8 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    grid-column-start: 9;
+    grid-column-end: 11;
 
     &__link {
         display: block;
@@ -22,6 +24,22 @@
 @media screen and (min-width: 768px) {
     .buy {
         width: 75px;
+        grid-column-start: 10;
+        grid-column-end: 11;
+        align-items: flex-end;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .buy {
+        width: 22px;
+        height: 73px;
+        grid-column-start: 10;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        flex-direction: column-reverse;
+        justify-content: space-between;
         margin-left: auto;
     }
 }

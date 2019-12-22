@@ -1,4 +1,7 @@
 .navigation {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    width: 177px;
 
     &__list {
         height: 100%;
@@ -25,12 +28,27 @@
 @media (min-width: 768px) {
     .navigation {
         width: 198px;
+        grid-column-start: 1;
+        grid-column-end: 4;
+
+        &__item {
+            align-items: flex-end;
+        }
     }
 }
 
 @media screen and (min-width: 1366px) {
-.navigation {
-  width: 58px;
-height: auto;
-}
+    .navigation {
+        width: 58px;
+        height: 101px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        &__list {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
 }

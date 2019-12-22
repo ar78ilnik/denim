@@ -1,13 +1,19 @@
 .entry {
+    grid-column-start: 2;
+    grid-column-end: 10;
+    grid-row-start: 3;
+    grid-row-end: 4;
     justify-self: center;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
 
     &__slogan {
         font-family: "Work Sans Regular";
         font-size: 18px;
         color: #727a82;
-        padding-top: 46px;
-        margin-bottom: 31px;
+        text-align: center;
     }
 
     &__brand {
@@ -21,8 +27,7 @@
         font-family: "Work Sans Bold";
         font-size: 16px;
         color: #fff;
-        padding-top: 23px;
-        padding-bottom: 23px;
+        padding: 23px 15px;
         background-color: #151C22;
         text-decoration: none;
     }
@@ -30,16 +35,37 @@
 
 @media screen and (min-width: 768px) {
     .entry {
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        align-self: center;
+
         &__slogan {
-            padding-top: 74px;
+            padding: 0;
+            margin: 0;
         }
 
         &__brand {
+            font-family: "Anton Regular";
             font-size: 98px;
         }
 
         &__link {
-            padding: 23px 20px;
+            padding: 23px;
+        }
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .entry {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        &__brand {
+            font-size: 128px;
         }
     }
 }

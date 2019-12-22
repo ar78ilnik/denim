@@ -4,17 +4,37 @@
 
 @media screen and (min-width: 768px) {
     .social {
-        width: 170px;
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
-        padding-top: 85px;
         flex-direction: row-reverse;
+        align-items: center;
+        grid-column-start: 8;
+        grid-column-end: 11;
+        grid-row-start: 3;
 
         &__link {
             font-family: "Work Sans Regular";
             color: #151c22;
             text-decoration: none;
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .social {
+        width: 70px;
+        height: 60px;
+        flex-direction: column;
+        margin-left: auto;
+        margin-top: auto;
+        grid-column-start: 10;
+        grid-column-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        &__link {
+            font-size: 14px;
         }
     }
 }
