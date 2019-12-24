@@ -1,4 +1,6 @@
 .category {
+    text-align: center;
+
     &__title {
         font-family: "Work Sans Bold";
         font-weight: 600;
@@ -7,9 +9,27 @@
     }
 
     &__wrap {
+        height: 345px;
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: stretch;
         padding-top: 33px;
+        padding-bottom: 60px;
+    }
+
+    &__model {
+        font-family: "Work Sans Medium";
+        font-weight: 400;
+        font-size: 16px;
+        color: #151c22;
+    }
+
+    &__card {
+        text-decoration: none;
+
+        &_bottom {
+            margin-top: auto;
+        }
     }
 }
