@@ -65,9 +65,22 @@
             margin: 0 auto;
             padding-top: 56px;
         }
-
-        &__item:first-child {
+        &__item {
+            width: 15%;
+            margin: 0;
+        }
+        &__item:nth-child(1) {
+            font-family: "Work Sans Extra Bold";
+            font-weight: 800;
+            font-size: 26px;
             width: 475px;
+            text-align: center;
+        }
+        &__item:nth-child(2) {
+            order: 1;
+        }
+        &__item:nth-child(3) {
+            order: 2;
         }
     }
 }
