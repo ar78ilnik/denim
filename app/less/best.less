@@ -95,14 +95,24 @@
 @media screen and (min-width: 1366px) {
     .best {
         padding-top: 136px;
+        padding-bottom: 0;
+        grid-template-rows: 50px 576px;
 
         &__title {
             font-size: 32px;
         }
 
+        &__over {
+            margin-top: 20px;
+        }
+
+        &__wrap {
+            height: 450px;
+        }
+
         &__card {
             width: 270px;
-            height: auto;
+            height: 350px;
         }
 
         &__all {

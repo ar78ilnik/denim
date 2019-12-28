@@ -63,24 +63,54 @@
             width: 475px;
             padding-left: 0;
             margin: 0 auto;
-            padding-top: 56px;
+            padding-top: 47px;
+
+            &_social {
+                width: 180px;
+                padding-top: 26px;
+            }
         }
+
         &__item {
             width: 15%;
             margin: 0;
         }
-        &__item:nth-child(1) {
+
+        &__item_links {
             font-family: "Work Sans Extra Bold";
             font-weight: 800;
             font-size: 26px;
             width: 475px;
             text-align: center;
+            margin-bottom: 37px;
         }
+
+        &__item_links &__link {
+            font-size: 24px;
+        }
+
+        &__item:nth-child(1) {
+            order: 0;
+        }
+
         &__item:nth-child(2) {
+            order: 4;
+        }
+
+        &__item:nth-child(3) {
             order: 1;
         }
-        &__item:nth-child(3) {
+
+        &__item:nth-child(4) {
+            order: 3;
+        }
+
+        &__item:nth-child(5) {
             order: 2;
+        }
+
+        &__item:nth-child(6) {
+            order: 6;
         }
     }
 }
