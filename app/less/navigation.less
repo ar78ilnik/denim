@@ -2,6 +2,9 @@
     grid-column-start: 1;
     grid-column-end: 7;
     width: 177px;
+    &_catalog {
+        display: none;
+    }
 
     &__list {
         height: 100%;
@@ -50,6 +53,14 @@
         &__list {
             flex-direction: column;
             align-items: flex-start;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navigation {
+        &_catalog {
+            display: block;
         }
     }
 }
