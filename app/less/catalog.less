@@ -1,0 +1,45 @@
+.catalog {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+        &__card {
+        width: 130px;
+        margin-bottom: 27px;
+        text-decoration: none;
+        color: #151c22;
+        text-align: left;
+    }
+    	&__over {
+        width: 130px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 8px;
+    }
+        &__model {
+        font-family: "Work Sans Medium";
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    	&__price {
+        font-family: "Work Sans Bold";
+        font-weight: 600;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+	.catalog {
+        &__card {
+            width: 206px;
+        }
+        &__load-more {
+        font-family: "Work Sans Bold";
+        font-size: 16px;
+        color: #fff;
+        padding: 23px 15px;
+        background-color: #151C22;
+        text-decoration: none;
+    }
+        }
+}
