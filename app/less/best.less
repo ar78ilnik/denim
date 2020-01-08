@@ -58,9 +58,9 @@
     .best {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 50px 720px;
-        padding-top: 100px;
-        padding-bottom: 286px;
+        grid-template-rows: 50px 880px;
+        padding-top: 130px;
+        padding-bottom: 96px;
 
         &__title {
             font-size: 28px;
@@ -71,14 +71,16 @@
         }
 
         &__wrap {
-            grid-column-start: 1;
+            width: 100%;
+            grid-column-start:1;
             grid-column-end: 5;
             grid-row-start: 2;
             grid-row-end: 3;
+            padding-top: 0;
         }
 
         &__card {
-            width: 206px;
+            width: 323px;
             height: auto;
             margin-bottom: 62px;
         }
