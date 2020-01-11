@@ -1,221 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-		<link rel="stylesheet" href="css/style.min.css">
-		<title>Catalog</title>
-	</head>
-	<body class="body">
-		<svg style="display: none">
-			<symbol id="menu" viewbox="0 6 40 24" fill="none" width="40" height="24">
-			<path d="M4 10h24c1.104.0 2-.896 2-2s-.896-2-2-2H4C2.896 6 2 6.896 2 8S2.896 10 4 10zm24 4H4c-1.104.0-2 .896-2 2s.896 2 2 2h24c1.104.0 2-.896 2-2S29.104 14 28 14zm0 8H4c-1.104.0-2 .896-2 2s.896 2 2 2h24c1.104.0 2-.896 2-2S29.104 22 28 22z" fill="black"/>
-			</symbol>
-			<symbol id="card" viewBox="0 0 18 18" fill="none">
-			<path d="M1 1H4.27273L6.46545 11.2019C6.54027 11.5527 6.7452 11.8678 7.04436 12.092C7.34351 12.3163 7.71784 12.4354 8.10182 12.4286H16.0545C16.4385 12.4354 16.8129 12.3163 17.112 12.092C17.4112 11.8678 17.6161 11.5527 17.6909 11.2019L19 4.80952H5.09091M8.36364 16.2381C8.36364 16.6589 7.99732 17 7.54545 17C7.09359 17 6.72727 16.6589 6.72727 16.2381C6.72727 15.8173 7.09359 15.4762 7.54545 15.4762C7.99732 15.4762 8.36364 15.8173 8.36364 16.2381ZM17.3636 16.2381C17.3636 16.6589 16.9973 17 16.5455 17C16.0936 17 15.7273 16.6589 15.7273 16.2381C15.7273 15.8173 16.0936 15.4762 16.5455 15.4762C16.9973 15.4762 17.3636 15.8173 17.3636 16.2381Z" stroke="#151C22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-			</symbol>
-			<symbol id="search" viewBox="0 0 18 18" fill="none">
-			<path d="M17 17L13.1333 13.1333M15.2222 8.11111C15.2222 12.0385 12.0385 15.2222 8.1111 15.2222C4.18375 15.2222 1 12.0385 1 8.11111C1 4.18375 4.18375 1 8.1111 1C12.0385 1 15.2222 4.18375 15.2222 8.11111Z" stroke="#151C22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-			</symbol>
-		</svg>
-		<div class="container">
-			<header class="header header-catalog">
-				<nav class="navigation navigation_catalog">
-					<ul class="navigation__list">
-						<li class="navigation__item"><a href="catalog.html" class="navigation__link">Woman</a></li>
-						<li class="navigation__item"><a href="#" class="navigation__link">Man</a></li>
-						<li class="navigation__item"><a href="#" class="navigation__link">New</a></li>
-					</ul>
-				</nav>
-				<button class="header-catalog__button" type="button">
-				Menu
-				<svg width="40" height="24">
-					<use xlink:href="#menu"></use>
-				</svg>
-				</button>
-				<a href="index.html" class="logo">Nîmes</a>
-				<section class="buy buy-catalog">
-					<a href="#" class="buy__link">
-						<svg width="20" height="18">
-							<use xlink:href="#search"></use>
-						</svg>
-					</a>
-					<a href="#" class="buy__link">
-						<svg width="20" height="18">
-							<use xlink:href="#card"></use>
-						</svg>
-					</a>
-				</section>
-			</header>
-		</div>
-		<main class="main">
-			<div class="container">
-				<section class="catalog-head">
-					<div class="catalog-head__slogan">
-						<ul class="catalog-head__list">
-							<li class="catalog-head__item"><a href="#" class="catalog-head__link">All categories</a></li>
-							<li class="catalog-head__item"><a href="#" class="catalog-head__link">Woman</a></li>
-							<li class="catalog-head__item"><a href="#" class="catalog-head__link">Jackets</a></li>
-						</ul>
-						<h1 class="catalog-head__slogan">Denim Collection Fall 2019</h1>
-					</div>
-					<div class="catalog-head__graph"></div>
-				</section>
-				<section class="photo-box__section">
-					<form class="photo-box__form" action="formdata" method="post" name="form">
-						<select class="photo-box__select" name="filter" id="box">
-							<option value="1">Filter by</option>
-							<option value="2">Price</option>
-							<option value="3">Color</option>
-							<option value="4">Collection</option>
-						</select>
-					</form>
-				</section>
-				<section class="catalog">
-					<a class="catalog__card" href="#">
-						<picture>
-							<source 
-								type="image/webp"
-								media="(min-width: 1366px)"
-								srcset="img/catalog-desk/catalog-desk-1.webp">
-							<source 
-								type="image/webp"
-								media="(min-width: 768px)"
-								srcset="img/catalog-tablet/catalog-tablet-1.webp">
-							<source 
-								type="image/webp"
-								srcset="img/catalog-mobile/catalog-mobile-1.webp">
-							<source 
-								media="(min-width: 1366px)"
-								srcset="img/catalog-desk/catalog-desk-1.jpg">
-							<source 
-								media="(min-width: 768px)" 
-								srcset="img/catalog-tablet/catalog-tablet-1.jpg">
-							<img
-								class="new-collection__img"
-								src="img/catalog-mobile/catalog-mobile-1.jpg"
-								alt="">
-						</picture>
-						<div class="catalog__over">
-							<span class="catalog__model">Jacket</span>
-							<span class="catalog__price">$ 40</span>
-						</div>
-					</a>
-					<a class="catalog__card" href="#">
-						<picture>
-							<source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-2.webp">
-							<source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-2.webp">
-							<source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-2.webp">
-							<source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-2.jpg">
-							<source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-2.jpg">
-							<img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-2.jpg" alt="">
-						</picture>
-						<div class="catalog__over">
-							<span class="catalog__model">Jacket</span>
-							<span class="catalog__price">$ 70</span>
-						</div>
-					</a>
-					<a class="catalog__card" href="#">
-						<picture>
-							<source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-3.webp">
-							<source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-3.webp">
-							<source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-3.webp">
-							<source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-3.jpg">
-							<source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-3.jpg">
-							<img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-3.jpg" alt="">
-						</picture>
-						<div class="catalog__over">
-							<span class="catalog__model">Jacket</span>
-							<span class="catalog__price">$ 60</span>
-						</div>
-					</a>
-					<a class="catalog__card" href="#">
-						<picture>
-							<source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-4.webp">
-							<source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-4.webp">
-							<source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-4.webp">
-							<source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-4.jpg">
-							<source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-4.jpg">
-							<img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-4.jpg" alt="">
-						</picture>
-						<div class="catalog__over">
-							<span class="catalog__model">Jacket</span>
-							<span class="catalog__price">$ 50</span>
-						</div>
-					</a>
-					<a class="catalog__card" href="#">
-						<picture>
-							<source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-5.webp">
-							<source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-5.webp">
-							<source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-5.webp">
-							<source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-5.jpg">
-							<source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-5.jpg">
-							<img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-5.jpg" alt="">
-						</picture>
-						<div class="catalog__over">
-							<span class="catalog__model">Jacket</span>
-							<span class="catalog__price">$ 160</span>
-						</div>
-					</a>
-					<a class="catalog__card" href="#">
-						<picture>
-							<source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-6.webp">
-							<source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-6.webp">
-							<source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-6.webp">
-							<source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-6.jpg">
-							<source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-6.jpg">
-							<img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-6.jpg" alt="">
-						</picture>
-						<div class="catalog__over">
-							<span class="catalog__model">Jacket</span>
-							<span class="catalog__price">$ 40</span>
-						</div>
-					</a>
-					<a class="catalog__card" href="#">
-						<picture>
-							<source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-7.webp">
-							<source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-7.webp">
-							<source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-7.webp">
-							<source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-7.jpg">
-							<source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-7.jpg">
-							<img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-7.jpg" alt="">
-						</picture>
-						<div class="catalog__over">
-							<span class="catalog__model">Jacket</span>
-							<span class="catalog__price">$ 110</span>
-						</div>
-					</a>
-					<a class="catalog__card" href="#">
-						<picture>
-							<source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-8.webp">
-							<source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-8.webp">
-							<source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-8.webp">
-							<source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-8.jpg">
-							<source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-8.jpg">
-							<img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-8.jpg" alt="">
-						</picture>
-						<div class="catalog__over">
-							<span class="catalog__model">Jacket</span>
-							<span class="catalog__price">$ 35</span>
-						</div>
-					</a>
-					<a class="catalog__card" href="#">
-						<picture>
-							<source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-9.webp">
-							<source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-9.webp">
-							<source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-9.webp">
-							<source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-9.jpg">
-							<source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-9.jpg">
-							<img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-9.jpg" alt="">
-						</picture>
-						<div class="catalog__over">
-							<span class="catalog__model">Jacket</span>
-							<span class="catalog__price">$ 85</span>
-						</div>
-					</a>
-				</section>
-									<button class="catalog__load-more">Load more</button>
-			</div>
-		</main>
-	</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Catalog</title>
+</head>
+
+<body class="body">
+    <svg style="display: none">
+        <symbol id="menu" viewbox="0 6 40 24" fill="none" width="40" height="24">
+            <path d="M4 10h24c1.104.0 2-.896 2-2s-.896-2-2-2H4C2.896 6 2 6.896 2 8S2.896 10 4 10zm24 4H4c-1.104.0-2 .896-2 2s.896 2 2 2h24c1.104.0 2-.896 2-2S29.104 14 28 14zm0 8H4c-1.104.0-2 .896-2 2s.896 2 2 2h24c1.104.0 2-.896 2-2S29.104 22 28 22z" fill="black" />
+        </symbol>
+        <symbol id="card" viewBox="0 0 18 18" fill="none">
+            <path d="M1 1H4.27273L6.46545 11.2019C6.54027 11.5527 6.7452 11.8678 7.04436 12.092C7.34351 12.3163 7.71784 12.4354 8.10182 12.4286H16.0545C16.4385 12.4354 16.8129 12.3163 17.112 12.092C17.4112 11.8678 17.6161 11.5527 17.6909 11.2019L19 4.80952H5.09091M8.36364 16.2381C8.36364 16.6589 7.99732 17 7.54545 17C7.09359 17 6.72727 16.6589 6.72727 16.2381C6.72727 15.8173 7.09359 15.4762 7.54545 15.4762C7.99732 15.4762 8.36364 15.8173 8.36364 16.2381ZM17.3636 16.2381C17.3636 16.6589 16.9973 17 16.5455 17C16.0936 17 15.7273 16.6589 15.7273 16.2381C15.7273 15.8173 16.0936 15.4762 16.5455 15.4762C16.9973 15.4762 17.3636 15.8173 17.3636 16.2381Z" stroke="#151C22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+        <symbol id="search" viewBox="0 0 18 18" fill="none">
+            <path d="M17 17L13.1333 13.1333M15.2222 8.11111C15.2222 12.0385 12.0385 15.2222 8.1111 15.2222C4.18375 15.2222 1 12.0385 1 8.11111C1 4.18375 4.18375 1 8.1111 1C12.0385 1 15.2222 4.18375 15.2222 8.11111Z" stroke="#151C22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </symbol>
+    </svg>
+    <div class="container">
+        <header class="header header-catalog">
+            <nav class="navigation navigation_catalog">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="catalog.html" class="navigation__link">Woman</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Man</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">New</a></li>
+                </ul>
+            </nav>
+            <button class="header-catalog__button" type="button">
+                Menu
+                <svg width="40" height="24">
+                    <use xlink:href="#menu"></use>
+                </svg>
+            </button>
+            <a href="index.html" class="logo">Nîmes</a>
+            <section class="buy buy-catalog">
+                <a href="#" class="buy__link">
+                    <svg width="20" height="18">
+                        <use xlink:href="#search"></use>
+                    </svg>
+                </a>
+                <a href="#" class="buy__link">
+                    <svg width="20" height="18">
+                        <use xlink:href="#card"></use>
+                    </svg>
+                </a>
+            </section>
+        </header>
+    </div>
+    <main class="main">
+        <div class="container">
+            <section class="catalog-head">
+                <div class="catalog-head__slogan">
+                    <ul class="catalog-head__list">
+                        <li class="catalog-head__item"><a href="#" class="catalog-head__link">All categories</a></li>
+                        <li class="catalog-head__item"><a href="#" class="catalog-head__link">Woman</a></li>
+                        <li class="catalog-head__item"><a href="#" class="catalog-head__link">Jackets</a></li>
+                    </ul>
+                    <h1 class="catalog-head__head">Denim Collection Fall 2019</h1>
+                </div>
+                <div class="catalog-head__graph"></div>
+            </section>
+            <section class="photo-box__section">
+                <form class="photo-box__form" action="formdata" method="post" name="form">
+                    <select class="photo-box__select" name="filter" id="box">
+                        <option value="1">Filter by</option>
+                        <option value="2">Price</option>
+                        <option value="3">Color</option>
+                        <option value="4">Collection</option>
+                    </select>
+                </form>
+            </section>
+            <section class="catalog">
+                <a class="catalog__card" href="#">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-1.webp">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-1.webp">
+                        <source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-1.webp">
+                        <source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-1.jpg">
+                        <source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-1.jpg">
+                        <img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-1.jpg" alt="">
+                    </picture>
+                    <div class="catalog__over">
+                        <span class="catalog__model">Jacket</span>
+                        <span class="catalog__price">$ 40</span>
+                    </div>
+                </a>
+                <a class="catalog__card" href="#">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-2.webp">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-2.webp">
+                        <source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-2.webp">
+                        <source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-2.jpg">
+                        <source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-2.jpg">
+                        <img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-2.jpg" alt="">
+                    </picture>
+                    <div class="catalog__over">
+                        <span class="catalog__model">Jacket</span>
+                        <span class="catalog__price">$ 70</span>
+                    </div>
+                </a>
+                <a class="catalog__card" href="#">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-3.webp">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-3.webp">
+                        <source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-3.webp">
+                        <source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-3.jpg">
+                        <source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-3.jpg">
+                        <img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-3.jpg" alt="">
+                    </picture>
+                    <div class="catalog__over">
+                        <span class="catalog__model">Jacket</span>
+                        <span class="catalog__price">$ 60</span>
+                    </div>
+                </a>
+                <a class="catalog__card" href="#">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-4.webp">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-4.webp">
+                        <source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-4.webp">
+                        <source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-4.jpg">
+                        <source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-4.jpg">
+                        <img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-4.jpg" alt="">
+                    </picture>
+                    <div class="catalog__over">
+                        <span class="catalog__model">Jacket</span>
+                        <span class="catalog__price">$ 50</span>
+                    </div>
+                </a>
+                <a class="catalog__card" href="#">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-5.webp">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-5.webp">
+                        <source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-5.webp">
+                        <source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-5.jpg">
+                        <source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-5.jpg">
+                        <img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-5.jpg" alt="">
+                    </picture>
+                    <div class="catalog__over">
+                        <span class="catalog__model">Jacket</span>
+                        <span class="catalog__price">$ 160</span>
+                    </div>
+                </a>
+                <a class="catalog__card" href="#">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-6.webp">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-6.webp">
+                        <source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-6.webp">
+                        <source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-6.jpg">
+                        <source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-6.jpg">
+                        <img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-6.jpg" alt="">
+                    </picture>
+                    <div class="catalog__over">
+                        <span class="catalog__model">Jacket</span>
+                        <span class="catalog__price">$ 40</span>
+                    </div>
+                </a>
+                <a class="catalog__card" href="#">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-7.webp">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-7.webp">
+                        <source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-7.webp">
+                        <source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-7.jpg">
+                        <source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-7.jpg">
+                        <img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-7.jpg" alt="">
+                    </picture>
+                    <div class="catalog__over">
+                        <span class="catalog__model">Jacket</span>
+                        <span class="catalog__price">$ 110</span>
+                    </div>
+                </a>
+                <a class="catalog__card" href="#">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-8.webp">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-8.webp">
+                        <source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-8.webp">
+                        <source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-8.jpg">
+                        <source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-8.jpg">
+                        <img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-8.jpg" alt="">
+                    </picture>
+                    <div class="catalog__over">
+                        <span class="catalog__model">Jacket</span>
+                        <span class="catalog__price">$ 35</span>
+                    </div>
+                </a>
+                <a class="catalog__card" href="#">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-9.webp">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-9.webp">
+                        <source type="image/webp" srcset="img/catalog-mobile/catalog-mobile-9.webp">
+                        <source media="(min-width: 1366px)" srcset="img/catalog-desk/catalog-desk-9.jpg">
+                        <source media="(min-width: 768px)" srcset="img/catalog-tablet/catalog-tablet-9.jpg">
+                        <img class="new-collection__img" src="img/catalog-mobile/catalog-mobile-9.jpg" alt="">
+                    </picture>
+                    <div class="catalog__over">
+                        <span class="catalog__model">Jacket</span>
+                        <span class="catalog__price">$ 85</span>
+                    </div>
+                </a>
+            </section>
+            <button class="catalog__load-more">Load more</button>
+        </div>
+    </main>
+</body>
+
 </html>

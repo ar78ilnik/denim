@@ -1,46 +1,76 @@
 .catalog-head {
-	display: flex;
-	justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+
     &__link {
-    font-family: "Work Sans Medium";
-    font-size: 18px;
-    text-decoration: none;
-    color: #727a82;
+        font-family: "Work Sans Medium";
+        font-size: 18px;
+        text-decoration: none;
+        color: #727a82;
     }
-    &__slogan {
-    font-family: "Work Sans Bold";
-    font-weight: bold;
-    font-size: 28px;
+
+    &__head {
+        width: 326px;
+        font-family: "Work Sans Bold";
+        font-weight: bold;
+        font-size: 28px;
     }
-	&__graph {
-		width: 294px;
-		height: 260px;
-		background-color: transparent;
-		background-image: url(../img/catalog-tablet/catalog-tablet-10.jpg);
-		background-repeat: no-repeat;
-		padding-right: 30px;
-		position: relative;
-		&::before {
-            content: "";
-            display: block;
-            width: 109px;
-            height: 134px;
-            position: absolute;
-            bottom: 0;
-            left: -31px;
-            background: repeating-linear-gradient(45deg, transparent, transparent 5px, black 6px, black 6px);
-            z-index: -1;
+}
+
+@media screen and (min-width: 768px) {
+    .catalog-head {
+        &__slogan {
+            padding-top: 67px;
         }
 
-        &::after {
-            content: "";
-            display: block;
-            width: 109px;
-            height: 177px;
-            position: absolute;
-            top: 0;
-            right: 0;
-            background: repeating-linear-gradient(45deg, transparent, transparent 5px, black 6px, black 6px);
+        &__item {
+            display: inline;
+
+            &::after {
+                content: "/";
+                font-size: 18px;
+                color: #727a82;
+            }
+
+            &:last-child::after {
+                content: "";
+            }
         }
-	}
+
+        &__head {
+            padding-top: 33px;
+        }
+
+        &__graph {
+            width: 294px;
+            height: 260px;
+            background-color: transparent;
+            background-image: url(../img/catalog-tablet/catalog-tablet-10.jpg);
+            background-repeat: no-repeat;
+            padding-right: 30px;
+            position: relative;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 109px;
+                height: 134px;
+                position: absolute;
+                bottom: 0;
+                left: -31px;
+                background: repeating-linear-gradient(45deg, transparent, transparent 5px, black 6px, black 6px);
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                width: 109px;
+                height: 177px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: repeating-linear-gradient(45deg, transparent, transparent 5px, black 6px, black 6px);
+            }
+        }
+    }
 }
