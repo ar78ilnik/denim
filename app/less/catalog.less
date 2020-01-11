@@ -1,27 +1,30 @@
 .catalog {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-        &__card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__card {
         width: 130px;
         margin-bottom: 27px;
         text-decoration: none;
         color: #151c22;
         text-align: left;
     }
-    	&__over {
+
+    &__over {
         width: 130px;
         display: flex;
         flex-direction: column;
         margin-top: 8px;
     }
-        &__model {
+
+    &__model {
         font-family: "Work Sans Medium";
         font-weight: 400;
         font-size: 16px;
     }
 
-    	&__price {
+    &__price {
         font-family: "Work Sans Bold";
         font-weight: 600;
         font-size: 14px;
@@ -29,17 +32,65 @@
 }
 
 @media screen and (min-width: 768px) {
-	.catalog {
+    .catalog {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 345px);
+        column-gap: 30px;
+        row-gap: 48px;
+
         &__card {
             width: 206px;
+            height: 345px;
+            margin-bottom: 0;
+
+            &:nth-child(4) {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+
+            &:nth-child(6) {
+                grid-row-start: 3;
+                grid-row-end: 4;
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+
+            &:nth-child(7) {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 4;
+                grid-row-end: 5;
+            }
+
+            &:nth-child(8) {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 4;
+                grid-row-end: 5;
+            }
+
+            &:nth-child(9) {
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 4;
+                grid-row-end: 5;
+            }
         }
+
+        &__over {
+            margin-top: 19px;
+        }
+
         &__load-more {
-        font-family: "Work Sans Bold";
-        font-size: 16px;
-        color: #fff;
-        padding: 23px 15px;
-        background-color: #151C22;
-        text-decoration: none;
-    }
+            font-family: "Work Sans Bold";
+            font-size: 16px;
+            color: #fff;
+            padding: 23px 15px;
+            background-color: #151C22;
+            text-decoration: none;
         }
+    }
 }
